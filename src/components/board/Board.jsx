@@ -11,14 +11,19 @@ const Board = () => {
   return (
     <>
       <div>
+
         <Card classname={'xxl'} ad_image={ad_image_xxl}/>
         <Ad/>
-        <CommercialBlocksXl/>
+        <Card classname={'xxl'} ad_image={ad_image_xxl}/>
         <Ad/>
+
+        {/*вывести в отдельную компоненту*/}
         <SmallBlocks/>
         <SmallBlocks/>
         <SmallBlocks/>
+
         <CommercialBlocksLss/>
+
         <SmallBlocks/>
         <SmallBlocks/>
         <SmallBlocks/>

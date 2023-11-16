@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import CardPage from "./pages/CardPage";
 import ProfilePage from "./pages/ProfilePage";
 import Layout from "./Layout";
+import CatalogBoardPage from "./pages/CatalogBoardPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
             <Route path={'/'} element={<Layout/>}>
                 <Route path={'/'} element={<MainPage/>}/>
+                <Route path={'/category'} element={<CatalogBoardPage/>}/>
                 <Route path={'/card'} element={<CardPage/>}/>
                 <Route path={'/myProfile'} element={<ProfilePage/>}/>
             </Route>

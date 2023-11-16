@@ -4,15 +4,19 @@ import MainPage from "./pages/MainPage";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import CardPage from "./pages/CardPage";
 import ProfilePage from "./pages/ProfilePage";
+import Layout from "./Layout";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path={'/'} element={<MainPage/>}/>
-          <Route path={'/card'} element={<CardPage/>}/>
-          <Route path={'/myProfile'} element={<ProfilePage/>}/>
+            <Route path={'/'} element={<Layout/>}>
+                <Route path={'/'} element={<MainPage/>}/>
+                <Route path={'/card'} element={<CardPage/>}/>
+                <Route path={'/myProfile'} element={<ProfilePage/>}/>
+            </Route>
+
         </Routes>
 
       </div>
